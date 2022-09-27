@@ -78,7 +78,7 @@ BOOL CSimpleApp::InitInstance()
 
 
 	// 창 하나만 초기화되었으므로 이를 표시하고 업데이트합니다.
-	pFrame->ShowWindow(SW_SHOW);
+	pFrame->ShowWindow(SW_SHOWMAXIMIZED);
 	pFrame->UpdateWindow();
 	return TRUE;
 }
@@ -86,6 +86,7 @@ BOOL CSimpleApp::InitInstance()
 int CSimpleApp::ExitInstance()
 {
 	//TODO: 추가한 추가 리소스를 처리합니다.
+	MessageBox(NULL, _T("프로그램을 종료합니다"), _T("종료"), MB_OK | MB_ICONINFORMATION);
 	return CWinApp::ExitInstance();
 }
 
